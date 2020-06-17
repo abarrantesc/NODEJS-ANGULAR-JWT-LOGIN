@@ -1,0 +1,46 @@
+<div class="cardCenter">
+    <div class="card card-panel hoverable">
+        <span class="card-title">Create account</span>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+        <div class="card-content">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">email</i>
+                    <input formControlName="email" name="email" id="email" type="email"
+                    [ngClass]="{ 'is-invalid': submitted && formValidation.email.errors }" class="form-control"
+                    >
+                    <label for="email">Email</label>
+                    <div *ngIf="submitted && formValidation.email.errors" class="invalid-feedback">
+                        <div *ngIf="formValidation.email.errors.required">Required field</div>
+                        <div *ngIf="formValidation.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">https</i>
+                    <input formControlName="password" name="password" id="password" type="password"
+                    [ngClass]="{ 'is-invalid': submitted && formValidation.password.errors }" class="form-control"
+                    >
+                    <label for="password">Password</label>
+                    <div *ngIf="submitted && formValidation.password.errors" class="invalid-feedback">
+                        <div *ngIf="formValidation.password.errors.required">Required field</div>
+                        <div *ngIf="formValidation.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">enhanced_encryption</i>
+                    <input formControlName="confirmPassword" name="confirmPassword" id="passwordc" type="password"
+                    [ngClass]="{ 'is-invalid': submitted && formValidation.confirmPassword.errors }" >
+                    <label for="passwordc">Confirm password</label>
+                    <div *ngIf="submitted && formValidation.confirmPassword.errors" class="invalid-feedback">
+                        <div *ngIf="formValidation.confirmPassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="formValidation.confirmPassword.errors.mustMatch">Passwords must match</div>
+                    </div>
+                </div>
+        </div>
+        <div class="card-action">
+            <button class="btn btn-orange">Ingresar</button>
+        </div>
+    </form>
+
+    </div>
+</div>

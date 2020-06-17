@@ -1,0 +1,22 @@
+@media only screen and (min-width: 993px){
+nav a.sidenav-trigger {
+    display: inline;
+}
+}
+
+nav {
+    background-color: #26a69a;
+ 
+}
+
+
+.sidenav li.active {
+    background-color: rgb(4, 187, 187);
+
+    a{
+        color: white;
+    }
+    i{
+        color: white;
+    }
+}

@@ -1,0 +1,37 @@
+.card{
+    width: 28rem;
+}
+
+.input-field .prefix {
+   color:#6F6F6F;
+}
+
+.invalid-feedback {
+    width: 100%;
+    font-size: 80%;
+    color: #dc3545;
+    margin-left: 3rem;
+    margin-top: -0.5rem;
+
+}
+
+.input-field .prefix.active {
+    color: #26a69a;
+}
+
+.card-title{
+    margin-top:1rem;
+}
+
+.card .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

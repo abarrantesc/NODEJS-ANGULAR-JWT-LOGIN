@@ -1,0 +1,127 @@
+<div class="container">
+</div>
+<div class="card card-panel">
+  <div class="card-content">
+    <div class="container-table">
+      <input type="checkbox" />
+  
+      <button style="margin-bottom: 1rem;" href="#modal1" class="btn waves-effect waves-light modal-trigger">Add task
+        <i class="material-icons right">control_point
+        </i>
+      </button>
+      <table id="tableListTaks" class="highlight">
+        <thead>
+  
+          <tr>
+            <th style="width: 1rem;"><label>
+                <input type="checkbox" />
+                <span></span>
+              </label></th>
+            <th>Task name</th>
+            <th>Status</th>
+            <th>Creation date</th>
+            <th>Priority</th>
+            <th>Assigned</th>
+            <th>Action</th>
+  
+          </tr>
+        </thead>
+  
+        <tbody id="bodyListTaks" *ngFor="let items of tasksList">
+          <tr>
+            <td><label>
+                <input  type="checkbox" />
+                <span></span>
+              </label></td>
+            <td>{{items.name}}</td>
+            <td>{{items.status}}</td>
+            <td>{{items.createdAt | date:'medium'}}</td>
+            <td>{{items.priority}}</td>
+            <td>{{items.assigned}}</td>
+
+            <td>
+  
+              <button class="btnEdit btnAction btn btn-small waves-effect waves-lighh" type="submit" name="action">
+                <i class="iconDisplay material-icons">create
+                </i>
+              </button>
+              <button class="btnDelete btnAction btn btn-small waves-effect waves-lighh" type="submit" name="action">
+                <i class="iconDisplay material-icons">delete_forever
+                </i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="paggination"> 
+        <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li class="active"><a href="#!">1</a></li>
+          <li class="waves-effect"><a href="#!">2</a></li>
+          <li class="waves-effect"><a href="#!">3</a></li>
+          <li class="waves-effect"><a href="#!">4</a></li>
+          <li class="waves-effect"><a href="#!">5</a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </div>
+
+
+</div>
+
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal">
+  <div class="modal-content">
+    <h5>Add new tasks</h5>
+    <div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">content_paste</i>
+        <input  id="tasks" type="text"  class="form-control" >
+        <label for="tasks">Task name</label>
+    </div>
+
+    <div class="input-field col s12">
+      <i class="material-icons prefix">history</i>
+      <select id="selectPriority">
+        <option value="" disabled selected>Status</option>
+        <option value="To do">To do</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Block">Block</option>
+        <option value="Done">Done</option>
+      </select>
+    </div>
+
+
+    <div class="input-field col s12">
+      <i class="material-icons prefix">timeline</i>
+      <select id="selectPriority">
+        <option value="" disabled selected>Priority</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="Higth">Higth</option>
+      </select>
+    </div>
+
+    <div class="input-field col s12">
+      <i class="material-icons prefix">assignment_ind</i>
+      <select id="selectAssign">
+        <option value="" disabled selected>Assign</option>
+        <option value="Low">Andrés Barrantes</option>
+        <option value="Medium">Frank Ramirez</option>
+        <option value="Higth">Mark Stulfer</option>
+      </select>
+    </div>
+  
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button style="margin-bottom: 1rem;margin: 1rem;" class="modal-close btn waves-effect waves-light">Cancel
+    </button>
+    <button style="margin-bottom: 1rem;margin: 1rem;" class="modal-close btn waves-effect waves-light">Create
+    </button>
+  </div>
+</div>
+        

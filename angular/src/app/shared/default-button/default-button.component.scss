@@ -1,0 +1,22 @@
+.btnDefault{
+    position: relative;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    background-color:#0FBCC7;
+    border: none;
+    outline:none;
+    transition-duration: 0.4s;
+    box-shadow: 0 1px 1px 0 rgba(80, 80, 80, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btnDefault:hover {
+    background-color: white; 
+    color:#0FBCC7; 
+    border: 2px solid #0FBCC7;
+  }
+

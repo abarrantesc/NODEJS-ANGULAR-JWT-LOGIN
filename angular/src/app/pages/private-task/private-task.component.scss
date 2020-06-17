@@ -1,0 +1,58 @@
+.container-table{
+    margin-top:1rem;
+}
+
+.btnAction{
+    width: 2rem;
+    margin: 0.1rem;
+}
+
+.btnEdit{
+ background-color: rgb(5, 150, 39);
+}
+
+.btnDelete{
+  background-color: #CE0606;
+}
+
+.iconDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paggination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.pagination li.active {
+    background-color: #26a69a;
+}
+
+.card {
+    margin-top: 5rem;
+    margin-right: 7rem;
+    margin-left: 7rem;
+}
+
+.input-field .prefix.active {
+    color: #26a69a;
+}
+
+.input-field .prefix {
+    color:#6F6F6F;
+ }
+
+
+ .modal {
+    max-height:none;
+    height: 35rem;
+}
+
+.modal-footer{
+    margin-top: 6rem;
+}
+ 
